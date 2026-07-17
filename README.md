@@ -38,20 +38,22 @@ Player был обречён на падение благодаря пауку
 - Supports vanilla and modded entities.
 - Supports renamed mobs.
 - Supports player names.
-- Supports all `death.attack.*` and `death.fell.*` messages.
+- Supports all `death.*` messages.
 - Uses resource pack translation keys.
 - Works entirely on the client.
 - Falls back to the original name if no declension is provided.
+- Built-in Russian declension entries for vanilla entities.
 
 ## Translation keys
 
-Examples:
+Examples (Russian):
 
 ```json
 {
-  "death.attack.mob.by.minecraft.spider": "spider",
-  "death.attack.player.by.PlayerName": "PlayerName-em",
-  "death.fell.assist.by.minecraft.spider": "spider"
+  "death.attack.mob.by.minecraft.spider": "пауком",
+  "death.attack.player.by.Steve": "Steve-ом",
+  "death.attack.mob.by.Боб": "Бобом",
+  "death.fell.assist.by.minecraft.spider": "пауку"
 }
 ```
 
