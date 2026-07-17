@@ -7,18 +7,18 @@ A client-side Fabric mod that allows languages with grammatical cases (such as R
 Without the mod:
 
 ```
-Player was slain by Spider
-Player was slain by lgrobzik_play
-Player was doomed to fall by Spider
+Player был убит Паук
+Player был убит Steve
+Player был обречён на падение благодаря Паук
 ```
 
 With a resource pack:
 
 ```json
 {
-  "death.attack.mob.by.minecraft.spider": "spider",
-  "death.attack.player.by.lgrobzik_play": "lgrobzik_play-em",
-  "death.fell.assist.by.minecraft.spider": "spider"
+  "death.attack.mob.by.minecraft.spider": "пауком",
+  "death.attack.player.by.Steve": "Steve-ом",
+  "death.fell.assist.by.minecraft.spider": "пауку"
 }
 ```
 
@@ -26,7 +26,7 @@ Death messages become:
 
 ```
 Player был убит пауком
-Player был убит lgrobzik_play-ем
+Player был убит Steve-ом
 Player был обречён на падение благодаря пауку
 ```
 
