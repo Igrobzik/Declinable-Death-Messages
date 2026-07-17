@@ -9,6 +9,7 @@ Without the mod:
 ```
 Player был убит Паук
 Player был убит Steve
+Player был убит Боб
 Player был обречён на падение благодаря Паук
 ```
 
@@ -18,6 +19,7 @@ With a resource pack:
 {
   "death.attack.mob.by.minecraft.spider": "пауком",
   "death.attack.player.by.Steve": "Steve-ом",
+  "death.attack.mob.by.Боб": "Бобом",
   "death.fell.assist.by.minecraft.spider": "пауку"
 }
 ```
@@ -27,6 +29,7 @@ Death messages become:
 ```
 Player был убит пауком
 Player был убит Steve-ом
+Player был убит Бобом
 Player был обречён на падение благодаря пауку
 ```
 
