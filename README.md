@@ -115,7 +115,7 @@ Without the mod:
 Player je ubijen od strane Pauk
 Player je ubijen od strane Steve
 Player je ubijen od strane Bob
-Player je osuđen(a) na pad od strane Pauk koristeći [Renamed Item]
+Player je usahnuo tokom borbe sa Steve
 ```
 
 With a resource pack:
@@ -125,7 +125,7 @@ With a resource pack:
   "death.attack.mob.by.minecraft.spider": "pauka",
   "death.attack.player.by.Steve": "Stevea",
   "death.attack.mob.by.Bob": "Boba",
-  "death.fell.assist.item.by.minecraft.spider": "pauka"
+  "death.attack.wither.player.by.Steve": "Steveom"
 }
 ```
 
@@ -135,7 +135,7 @@ Death messages become:
 Player je ubijen od strane pauka
 Player je ubijen od strane Stevea
 Player je ubijen od strane Boba
-Player je osuđen(a) na pad od strane pauka koristeći [Renamed Item]
+Player je usahnuo tokom borbe sa Steveom
 ```
 </details>
 
@@ -175,7 +175,7 @@ Examples:
   "death.attack.mob.by.minecraft.spider": "pauka",
   "death.attack.player.by.Steve": "Stevea",
   "death.attack.mob.by.Bob": "Boba",
-  "death.fell.assist.item.by.minecraft.spider": "pauka"
+  "death.attack.wither.player.by.Steve": "Steveom"
 }
 ```
 </details>
