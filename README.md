@@ -1,10 +1,10 @@
 # Declinable Death Messages
 <details>
-<summary>RU Русское описание</summary>
+<summary>🇷🇺 Русское описание</summary>
 
 ### Склоняемые сообщения о смерти
 
-Клиентский Fabric-мод, позволяющий языкам, имеющим склонения (русский, украинский, польский, чешский, словацкий и т.д.) склонять имена убийц в сообщениях о смерти Minecraft.
+Клиентский Fabric-мод, позволяющий языкам со склонениями (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имена убийц в сообщениях о смерти Minecraft.
 
 ## Пример
 
@@ -43,10 +43,10 @@ Player был обречён на падение благодаря пауку
 - Поддержка переименованных мобов.
 - Поддержка имён игроков.
 - Поддержка всех сообщений с ключом `death.*`.
-- Использование переводимых наборами ресурсов ключей.
+- Использование ключей перевода из наборов ресурсов.
 - Работа исключительно на стороне клиента.
 - Возврат оригинального имени, если склонение не указано.
-- Встроенные склонения русского языка для ванильных сущностей.
+- Встроенные русские склонения для ванильных сущностей.
 
 ## Ключи перевода
 
@@ -67,11 +67,11 @@ Player был обречён на падение благодаря пауку
 
 ## Лицензия
 
-CC0-1.0
+Под лицензией CC0-1.0
 
 </details>
 
-A client-side Fabric mod that allows languages with grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
+A client-side Fabric mod that allows languages that use grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
 
 ## Example (Russian)
 
@@ -134,4 +134,4 @@ Install the mod on the client. If your language isn't supported out of the box, 
 
 ## License
 
-CC0-1.0
+Licensed under CC0-1.0.
