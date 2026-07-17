@@ -4,7 +4,7 @@
 
 ### Склоняемые сообщения о смерти
 
-Клиентский Fabric-мод, позволяющий языкам со склонениями (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имена убийц в сообщениях о смерти Minecraft.
+Клиентский Fabric-мод, позволяющий языкам со склонениями (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имён убийц в сообщениях о смерти Minecraft.
 
 ## Пример
 
@@ -73,8 +73,10 @@ Player был обречён на падение благодаря пауку
 
 A client-side Fabric mod that allows languages that use grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
 
-## Example (Russian)
+## Examples
 
+<details>
+<summary>Russian</summary>
 Without the mod:
 
 ```
@@ -91,7 +93,7 @@ With a resource pack:
   "death.attack.mob.by.minecraft.spider": "пауком",
   "death.attack.player.by.Steve": "Steve-ом",
   "death.attack.mob.by.Боб": "Бобом",
-  "death.fell.assist.by.minecraft.spider": "пауку"
+  "death.fell.assist.item.by.minecraft.spider": "пауку"
 }
 ```
 
@@ -103,6 +105,39 @@ Player был убит Steve-ом
 Player был убит Бобом
 Player был обречён на падение благодаря пауку
 ```
+</details>
+
+<details>
+<summary>Serbian</summary>
+Without the mod:
+
+```
+Player je ubijen od strane Pauk
+Player je ubijen od strane Steve
+Player je ubijen od strane Bob
+Player je osuđen(a) na pad od strane Pauk koristeći [Renamed Item]
+```
+
+With a resource pack:
+
+```json
+{
+  "death.attack.mob.by.minecraft.spider": "pauka",
+  "death.attack.player.by.Steve": "Stevea",
+  "death.attack.mob.by.Bob": "Boba",
+  "death.fell.assist.item.by.minecraft.spider": "pauka"
+}
+```
+
+Death messages become:
+
+```
+Player je ubijen od strane pauka
+Player je ubijen od strane Stevea
+Player je ubijen od strane Boba
+Player je osuđen(a) na pad od strane pauka koristeći [Renamed Item]
+```
+</details>
 
 ## Features
 
@@ -117,7 +152,10 @@ Player был обречён на падение благодаря пауку
 
 ## Translation keys
 
-Examples (Russian):
+Examples:
+
+<details>
+<summary>Russian</summary>
 
 ```json
 {
@@ -127,6 +165,20 @@ Examples (Russian):
   "death.fell.assist.by.minecraft.spider": "пауку"
 }
 ```
+</details>
+
+<details>
+<summary>Serbian</summary>
+
+```json
+{
+  "death.attack.mob.by.minecraft.spider": "pauka",
+  "death.attack.player.by.Steve": "Stevea",
+  "death.attack.mob.by.Bob": "Boba",
+  "death.fell.assist.item.by.minecraft.spider": "pauka"
+}
+```
+</details>
 
 ## Installation
 
