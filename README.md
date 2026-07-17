@@ -4,7 +4,7 @@
 
 ### Склоняемые сообщения о смерти
 
-Клиентский Fabric-мод, позволяющий языкам со склонениями (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имён убийц в сообщениях о смерти Minecraft.
+Клиентский Fabric-мод, позволяющий языкам с грамматическими падежами (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имён убийц в сообщениях о смерти Minecraft.
 
 ## Пример
 
@@ -65,13 +65,15 @@ Player был обречён на падение благодаря пауку
 
 Установите мод на клиент. Если ваш язык не поддерживается модом, установите дополнительный набор ресурсов с необходимыми ключами перевода.
 
+Мод не изменяет существующие файлы переводов. Вместо этого он использует дополнительные ключи перевода из встроенных переводов или наборов ресурсов.
+
 ## Лицензия
 
 Под лицензией CC0-1.0
 
 </details>
 
-A client-side Fabric mod that allows languages that use grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
+A client-side Fabric mod that allows languages with grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
 
 ## Examples
 
@@ -93,7 +95,7 @@ With a resource pack:
   "death.attack.mob.by.minecraft.spider": "пауком",
   "death.attack.player.by.Steve": "Steve-ом",
   "death.attack.mob.by.Боб": "Бобом",
-  "death.fell.assist.item.by.minecraft.spider": "пауку"
+  "death.fell.assist.by.minecraft.spider": "пауку"
 }
 ```
 
@@ -109,6 +111,8 @@ Player был обречён на падение благодаря пауку
 
 <details>
 <summary>Serbian</summary>
+Example only. Not included by default.
+
 Without the mod:
 
 ```
@@ -156,7 +160,6 @@ Examples:
 
 <details>
 <summary>Russian</summary>
-
 ```json
 {
   "death.attack.mob.by.minecraft.spider": "пауком",
@@ -169,6 +172,7 @@ Examples:
 
 <details>
 <summary>Serbian</summary>
+Example only. Not included by default.
 
 ```json
 {
@@ -183,6 +187,8 @@ Examples:
 ## Installation
 
 Install the mod on the client. If your language isn't supported out of the box, install a resource pack containing the required translation keys.
+
+The mod does not modify language files directly. Instead, it looks for additional translation keys in resource packs.
 
 ## License
 
