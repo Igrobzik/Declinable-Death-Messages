@@ -2,7 +2,7 @@
 
 A client-side Fabric mod that allows languages with grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
 
-## Example
+## Example (Russian)
 
 Without the mod:
 
