@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "declinable-death-messages",
+	"version": "${version}",
+	"name": "Declinable Death Messages",
+	"description": "Inflects killer mob names in death messages for languages with grammatical cases.\nSupports custom declensions (case marking) through resource pack translation keys.",
+	"authors": [
+		"Igrobzik"
+	],
+	"contact": {
+		"homepage": "https://modrinth.com/user/Igrobzik",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/declinable-death-messages/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"me.declinabledeathmessages.DeclinableDeathMessages"
+		],
+		"client": [
+			"me.declinabledeathmessages.client.DeclinableDeathMessagesClient"
+		]
+	},
+	"mixins": [
+		{
+			"config": "declinable-death-messages.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.3",
+		"minecraft": "~26.1.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

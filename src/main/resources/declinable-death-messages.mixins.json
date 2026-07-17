@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "me.declinabledeathmessages.mixin",
+  "compatibilityLevel": "JAVA_25",
+
+  "mixins": [],
+
+  "client": [
+    "TranslatableContentsMixin"
+  ],
+
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

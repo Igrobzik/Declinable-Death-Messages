@@ -1,0 +1,3 @@
+{
+   "modmenu.descriptionTranslation.declinable-death-messages": "Inflects killer mob names in death messages for languages with grammatical cases.\nSupports custom declensions (case marking) through resource pack translation keys."
+}
