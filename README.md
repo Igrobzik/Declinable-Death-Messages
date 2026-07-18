@@ -48,7 +48,7 @@ Player был обречён на падение благодаря пауку
 - Использование ключей перевода из наборов ресурсов.
 - Работа исключительно на стороне клиента.
 - Возврат оригинального имени, если склонение не указано.
-- Встроенные русские склонения для ванильных сущностей.
+- Встроенные русские склонения для ванильных сущностей и некоторых имён.
 
 ## Ключи перевода
 
@@ -194,7 +194,7 @@ Gracz Player obumarł podczas walki z Stevem
 - Uses resource pack translation keys.
 - Works entirely on the client.
 - Falls back to the original name if no declension is provided.
-- Built-in Russian declension entries for vanilla entities.
+- Built-in Russian declension entries for vanilla entities and some names.
 
 ## Translation keys
 
