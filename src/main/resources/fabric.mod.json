@@ -8,7 +8,8 @@
 		"Igrobzik"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/user/Igrobzik",
+		"homepage": "https://modrinth.com/mod/declinable-death-messages",
+		"issues": "https://github.com/Igrobzik/Declinable-Death-Messages/issues",
 		"sources": "https://github.com/Igrobzik/Declinable-Death-Messages"
 	},
 	"license": "CC0-1.0",

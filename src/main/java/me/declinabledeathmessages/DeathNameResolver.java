@@ -16,7 +16,7 @@ public class DeathNameResolver {
 
         if (!customName.isEmpty()) {
 
-            Component result = find(prefix + customName);
+            Component result = find(prefix + customName, killer);
 
             if (result != null) {
                 return result;
@@ -39,7 +39,7 @@ public class DeathNameResolver {
         }
 
 
-        Component result = find(prefix + shortKey);
+        Component result = find(prefix + shortKey, killer);
 
         if (result != null) {
             return result;
@@ -52,7 +52,8 @@ public class DeathNameResolver {
             result = find(
                 prefix + shortKey.substring(
                     shortKey.indexOf('.') + 1
-                )
+                ),
+                killer
             );
 
             if (result != null) {
@@ -65,7 +66,7 @@ public class DeathNameResolver {
     }
 
 
-    private static Component find(String key) {
+    private static Component find(String key, Component original) {
 
         Language language = Language.getInstance();
 
@@ -73,12 +74,7 @@ public class DeathNameResolver {
             return null;
         }
 
-        String value = language.getOrDefault(key);
-
-        if (value.isEmpty()) {
-            return null;
-        }
-
-        return Component.translatable(key);
+        return Component.translatable(key)
+                .setStyle(original.getStyle());
     }
 }
