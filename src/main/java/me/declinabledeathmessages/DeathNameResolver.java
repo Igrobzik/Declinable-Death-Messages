@@ -4,6 +4,8 @@ import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.contents.TranslatableContents;
 
+import me.declinabledeathmessages.config.ConfigManager;
+
 public class DeathNameResolver {
 
     public static Component resolve(Component killer, String deathKey) {
@@ -16,10 +18,13 @@ public class DeathNameResolver {
 
         if (!customName.isEmpty()) {
 
-            Component result = find(prefix + customName, killer);
+            if (ConfigManager.config.namesDeclension) {
 
-            if (result != null) {
-                return result;
+                Component result = find(prefix + customName, killer);
+
+                if (result != null) {
+                    return result;
+                }
             }
         }
 

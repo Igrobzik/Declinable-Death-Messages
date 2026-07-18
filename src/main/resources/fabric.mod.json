@@ -21,6 +21,9 @@
 		],
 		"client": [
 			"me.declinabledeathmessages.client.DeclinableDeathMessagesClient"
+		],
+		"modmenu": [
+			"me.declinabledeathmessages.client.ModMenuIntegration"
 		]
 	},
 	"mixins": [
@@ -34,5 +37,9 @@
 		"minecraft": "~26.1.2",
 		"java": ">=25",
 		"fabric-api": "*"
+	},
+	"recommends": {
+    	"modmenu": "*",
+		"cloth-config": "*"
 	}
 }
