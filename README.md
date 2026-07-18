@@ -152,6 +152,8 @@ Player je usahnuo tokom borbe sa Steveom
 <details>
 <summary>Polish</summary>
 
+Example only. Not included by default.
+
 Without the mod:
 
 ```
