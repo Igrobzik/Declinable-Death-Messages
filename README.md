@@ -227,7 +227,9 @@ Example only. Not included by default.
 ```
 
 </details>
-<summary>Serbian</summary>
+
+<details>
+<summary>Polish</summary>
 
 Example only. Not included by default.
 
