@@ -79,6 +79,7 @@ A client-side Fabric mod that allows languages with grammatical cases (such as R
 
 <details>
 <summary>Russian</summary>
+
 Without the mod:
 
 ```
@@ -107,10 +108,12 @@ Player был убит Steve-ом
 Player был убит Бобом
 Player был обречён на падение благодаря пауку
 ```
+
 </details>
 
 <details>
 <summary>Serbian</summary>
+
 Example only. Not included by default.
 
 Without the mod:
@@ -141,6 +144,43 @@ Player je ubijen od strane Stevea
 Player je ubijen od strane Boba
 Player je usahnuo tokom borbe sa Steveom
 ```
+
+</details>
+
+<details>
+<summary>Polish</summary>
+
+Without the mod:
+
+```
+Gracz Player został zabity przez: Pająk
+Gracz Player został zabity przez: Steve
+Gracz Player został zabity przez: Bob
+Gracz Player obumarł podczas walki z Steve
+```
+
+With a resource pack:
+
+```json
+{
+  "death.attack.mob": "Gracz %1$s został zabity przez %2$s",
+  "death.attack.mob.by.minecraft.spider": "pająka",
+  "death.attack.player": "Gracz %1$s został zabity przez %2$s",
+  "death.attack.player.by.Steve": "Steve'a",
+  "death.attack.mob.by.Bob": "Boba",
+  "death.attack.wither.player.by.minecraft.spider": "Stevem"
+}
+```
+
+Death messages become:
+
+```
+Gracz Player został zabity przez pająka
+Gracz Player został zabity przez Steve'a
+Gracz Player został zabity przez Boba
+Gracz Player obumarł podczas walki z Stevem
+```
+
 </details>
 
 ## Features
@@ -160,6 +200,7 @@ Examples:
 
 <details>
 <summary>Russian</summary>
+
 ```json
 {
   "death.attack.mob.by.minecraft.spider": "пауком",
@@ -168,10 +209,12 @@ Examples:
   "death.fell.assist.by.minecraft.spider": "пауку"
 }
 ```
+
 </details>
 
 <details>
 <summary>Serbian</summary>
+
 Example only. Not included by default.
 
 ```json
@@ -182,6 +225,23 @@ Example only. Not included by default.
   "death.attack.wither.player.by.Steve": "Steveom"
 }
 ```
+
+</details>
+<summary>Serbian</summary>
+
+Example only. Not included by default.
+
+```json
+{
+  "death.attack.mob": "Gracz %1$s został zabity przez %2$s",
+  "death.attack.mob.by.minecraft.spider": "pająka",
+  "death.attack.player": "Gracz %1$s został zabity przez %2$s",
+  "death.attack.player.by.Steve": "Steve'a",
+  "death.attack.mob.by.Bob": "Boba",
+  "death.attack.wither.player.by.minecraft.spider": "Stevem"
+}
+```
+
 </details>
 
 ## Installation
