@@ -6,6 +6,8 @@
 
 Клиентский Fabric-мод, позволяющий языкам с грамматическими падежами (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имён убийц в сообщениях о смерти Minecraft.
 
+Мод не изменяет существующие файлы переводов. Вместо этого он использует дополнительные ключи перевода из встроенных переводов или наборов ресурсов.
+
 ## Пример
 
 Без мода:
@@ -65,8 +67,6 @@ Player был обречён на падение благодаря пауку
 
 Установите мод на клиент. Если ваш язык не поддерживается модом, установите дополнительный набор ресурсов с необходимыми ключами перевода.
 
-Мод не изменяет существующие файлы переводов. Вместо этого он использует дополнительные ключи перевода из встроенных переводов или наборов ресурсов.
-
 ## Лицензия
 
 Под лицензией CC0-1.0
@@ -74,6 +74,8 @@ Player был обречён на падение благодаря пауку
 </details>
 
 A client-side Fabric mod that allows languages with grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
+
+The mod does not modify language files directly. Instead, it looks for additional translation keys in resource packs.
 
 ## Examples
 
@@ -249,8 +251,6 @@ Example only. Not included by default.
 ## Installation
 
 Install the mod on the client. If your language isn't supported out of the box, install a resource pack containing the required translation keys.
-
-The mod does not modify language files directly. Instead, it looks for additional translation keys in resource packs.
 
 ## License
 
