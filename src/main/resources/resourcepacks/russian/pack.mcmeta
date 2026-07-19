@@ -1,0 +1,9 @@
+{
+  "pack": {
+    "description": {
+      "translate": "declinable-death-messages.resourcepack.russian.description"
+    },
+    "min_format": 84,
+    "max_format": 84
+  }
+}

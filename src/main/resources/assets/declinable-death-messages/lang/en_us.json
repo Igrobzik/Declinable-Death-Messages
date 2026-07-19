@@ -5,5 +5,7 @@
    "declinable-death-messages.config.names": "Decline names",
    "declinable-death-messages.config.names.tooltip": "Use keys of the form '[death message].by.[name]' to decline player names and renamed entity names.\nDisable this if your resource pack or a server resource pack abuses this feature.",
    "declinable-death-messages.config.names.tooltip.disabledAdvancedTooltips": "Additionally, you can enable advanced tooltips (%s + %s) to display the killer's original name when hovering over their name.",
-   "declinable-death-messages.config.names.tooltip.enabledAdvancedTooltips": "Additionally, with advanced tooltips enabled, you can hover over the killer's name to see their original name."
+   "declinable-death-messages.config.names.tooltip.enabledAdvancedTooltips": "Additionally, with advanced tooltips enabled, you can hover over the killer's name to see their original name.",
+   "declinable-death-messages.resourcepack.russian": "Russian declensions",
+   "declinable-death-messages.resourcepack.russian.description": "Russian declension pack"
 }
