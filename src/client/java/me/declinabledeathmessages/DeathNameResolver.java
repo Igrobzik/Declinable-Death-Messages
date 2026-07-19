@@ -10,8 +10,18 @@ public class DeathNameResolver {
 
     public static Component resolve(Component killer, String deathKey) {
 
-        String prefix = deathKey + ".by.";
+        System.out.println(
+            "[DDM] DeathNameResolver: key=" + deathKey +
+            ", killer=" + killer.getString()
+        );
 
+        // Нормализуем уже заменённые сообщения
+        // death.attack.mob.by.Боб.message -> death.attack.mob
+        if (deathKey.contains(".by.") && deathKey.endsWith(".message")) {
+            deathKey = deathKey.substring(0, deathKey.indexOf(".by."));
+        }
+
+        String prefix = deathKey + ".by.";
 
         // Сначала пробуем имя
         String customName = killer.getString();
@@ -66,20 +76,24 @@ public class DeathNameResolver {
             }
         }
 
-
         return killer;
     }
 
+    // Новый метод для поиска кастомных переводов
+    public static Component resolveCustom(String customKey, Component original) {
+        Component result = find(customKey, original);
+        return result != null ? result : original;
+    }
 
+    // Вспомогательный метод для поиска перевода
     private static Component find(String key, Component original) {
-
-        Language language = Language.getInstance();
-
-        if (!language.has(key)) {
-            return null;
+        // Проверяем, есть ли перевод в текущем языке
+        if (Language.getInstance().has(key)) {
+            return Component.translatable(
+                key,
+                original
+            );
         }
-
-        return Component.translatable(key)
-                .setStyle(original.getStyle());
+        return null;
     }
 }
