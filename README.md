@@ -47,8 +47,10 @@ Player был обречён на падение благодаря пауку
 - Поддержка всех сообщений с ключом `death.*`.
 - Использование ключей перевода из наборов ресурсов.
 - Работа исключительно на стороне клиента.
+- Настройки через Cloth Config.
+- Возможность отключить склонение имён игроков и сущностей через настройки мода.
 - Возврат оригинального имени, если склонение не указано.
-- Встроенные русские склонения для ванильных сущностей и некоторых имён (которые вы можете использовать как пример для перевода на ваш язык).
+- Встроенный набор русских склонений для ванильных сущностей, некоторых имён и некоторых модовых сущностей и сообщений о смерти (которые вы можете использовать как пример для перевода на ваш язык).
 
 ## Ключи перевода
 
@@ -65,7 +67,7 @@ Player был обречён на падение благодаря пауку
 
 ## Установка
 
-Установите мод на клиент. Если ваш язык не поддерживается модом, установите дополнительный набор ресурсов с необходимыми ключами перевода.
+Установите мод на клиент. По умолчанию мод использует встроенные склонения для русского языка, которые можно отключить в настройках мода. Если ваш язык не поддерживается модом, установите дополнительный набор ресурсов с необходимыми ключами перевода.
 
 ## Лицензия
 
@@ -195,8 +197,10 @@ Gracz Player obumarł podczas walki z Stevem
 - Supports all `death.*` messages.
 - Uses resource pack translation keys.
 - Works entirely on the client.
+- Configurable through Cloth Config.
+- Ability to disable name declension for players and entities in the mod settings.
 - Falls back to the original name if no declension is provided.
-- Built-in Russian declension entries for vanilla entities and some names (which you can use as examples for translation into your language).
+- Built-in Russian declension pack with vanilla entities, some names, and some modded entities and death messages (which you can use as examples when translating into your language).
 
 ## Translation keys
 
@@ -252,7 +256,7 @@ Example only. Not included by default.
 
 ## Installation
 
-Install the mod on the client. If your language isn't supported out of the box, install a resource pack containing the required translation keys.
+Install the mod on the client. By default, the mod uses built-in Russian declension entries. They can be disabled in the mod settings. If your language isn't supported out of the box, install a resource pack containing the required translation keys.
 
 ## License
 
