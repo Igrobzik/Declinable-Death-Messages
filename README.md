@@ -72,7 +72,7 @@ Player был сожжён дотла, пока боролся со Steve-ом
 
 ## Установка
 
-Установите мод на клиент. По умолчанию мод использует встроенные склонения для русского языка, которые можно отключить в настройках мода. Если ваш язык не поддерживается модом, установите дополнительный набор ресурсов с необходимыми ключами перевода.
+Установите мод на клиент. По умолчанию мод использует встроенные склонения для русского языка, которые можно отключить в меню наборов ресурсов. Если ваш язык не поддерживается модом, установите дополнительный набор ресурсов с необходимыми ключами перевода.
 
 ## Лицензия
 
@@ -270,7 +270,7 @@ Example only. Not included by default.
 
 ## Installation
 
-Install the mod on the client. By default, the mod uses built-in Russian declension entries. They can be disabled in the mod settings. If your language isn't supported out of the box, install a resource pack containing the required translation keys.
+Install the mod on the client. By default, the mod uses built-in Russian declension entries. They can be disabled in the resource packs screen. If your language isn't supported out of the box, install a resource pack containing the required translation keys.
 
 ## License
 
