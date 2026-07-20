@@ -2,6 +2,7 @@ package me.declinabledeathmessages;
 
 import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.contents.TranslatableContents;
 
 import me.declinabledeathmessages.config.ConfigManager;
@@ -10,7 +11,8 @@ public class DeathMessageResolver {
 
     public static Component resolve(Component message) {
 
-        if (!(message.getContents() instanceof TranslatableContents contents)) {
+        if (!(message.getContents()
+                instanceof TranslatableContents contents)) {
             return message;
         }
 
@@ -23,8 +25,9 @@ public class DeathMessageResolver {
         }
 
 
-        // Уже заменённое сообщение не трогаем
-        if (key.contains(".by.") && key.endsWith(".message")) {
+        // Уже изменённое сообщение не трогаем
+        if (key.contains(".by.")
+                && key.endsWith(".message")) {
             return message;
         }
 
@@ -42,28 +45,47 @@ public class DeathMessageResolver {
         }
 
 
+
         /*
-         * 1. Полная замена сообщения:
+         * Полная замена сообщения:
          *
-         * death.attack.mob.by.Боб.message
-         * death.attack.player.by.Steve.message
-         * death.attack.mob.by.minecraft.husk.message
+         * death.attack.mob.by.husk.message
          */
-        Component customMessage = findCustomMessage(
-                key,
-                killer,
-                args
-        );
+        if (ConfigManager.config.messageInflection) {
+
+            Component customMessage =
+                    findCustomMessage(
+                            key,
+                            killer,
+                            args
+                    );
 
 
-        if (customMessage != null) {
-            return customMessage;
+            if (customMessage != null) {
+
+                if (ConfigManager.config.originalMessageHover) {
+
+                    Component original =
+                            Component.translatable(
+                                    key,
+                                    args
+                            );
+
+                    return addOriginalMessageHover(
+                            customMessage,
+                            original
+                    );
+                }
+
+
+                return customMessage;
+            }
         }
 
 
+
         /*
-         * 2. Если полного сообщения нет —
-         * меняем только убийцу:
+         * Только склонение убийцы:
          *
          * Кадавр -> Кадавром
          */
@@ -76,15 +98,44 @@ public class DeathMessageResolver {
 
         if (replacedKiller != killer) {
 
-            Object[] newArgs = args.clone();
+            Object[] newArgs =
+                    args.clone();
 
-            newArgs[1] = replacedKiller;
+
+            /*
+             * сохраняем оригинальный hover убийцы
+             */
+            newArgs[1] =
+                    replacedKiller.copy()
+                            .withStyle(
+                                    killer.getStyle()
+                            );
 
 
-            return Component.translatable(
-                    key,
-                    newArgs
-            );
+            Component result =
+                    Component.translatable(
+                            key,
+                            newArgs
+                    );
+
+
+            if (ConfigManager.config.originalMessageHover) {
+
+                Component original =
+                        Component.translatable(
+                                key,
+                                args
+                        );
+
+
+                return addOriginalMessageHover(
+                        result,
+                        original
+                );
+            }
+
+
+            return result;
         }
 
 
@@ -99,7 +150,8 @@ public class DeathMessageResolver {
             Object[] args
     ) {
 
-        String prefix = deathKey + ".by.";
+        String prefix =
+                deathKey + ".by.";
 
 
         /*
@@ -107,15 +159,19 @@ public class DeathMessageResolver {
          *
          * death.attack.mob.by.Боб.message
          */
-        String name = killer.getString();
+        String name =
+                killer.getString();
 
 
-        if (!name.isEmpty() && ConfigManager.config.namesDeclension) {
+        if (!name.isEmpty()
+                && ConfigManager.config.namesDeclension) {
 
-            Component result = find(
-                    prefix + name + ".message",
-                    args
-            );
+
+            Component result =
+                    find(
+                            prefix + name + ".message",
+                            args
+                    );
 
 
             if (result != null) {
@@ -128,57 +184,66 @@ public class DeathMessageResolver {
         /*
          * Сущность:
          *
-         * entity.minecraft.husk
-         *
-         * -> minecraft.husk
+         * death.attack.mob.by.minecraft.husk.message
+         * death.attack.mob.by.husk.message
          */
-        if (killer.getContents() instanceof TranslatableContents entityContents) {
+        if (ConfigManager.config.entitiesDeclension) {
 
 
-            String entityKey = entityContents.getKey();
+            if (killer.getContents()
+                    instanceof TranslatableContents entityContents) {
 
 
-            String shortKey = entityKey;
+                String entityKey =
+                        entityContents.getKey();
 
 
-            if (entityKey.startsWith("entity.")) {
-                shortKey = entityKey.substring("entity.".length());
-            }
+                String shortKey =
+                        entityKey;
 
 
+                if (entityKey.startsWith("entity.")) {
 
-            /*
-             * death.attack.mob.by.minecraft.husk.message
-             */
-            Component result = find(
-                    prefix + shortKey + ".message",
-                    args
-            );
-
-
-            if (result != null) {
-                return result;
-            }
+                    shortKey =
+                            entityKey.substring(
+                                    "entity.".length()
+                            );
+                }
 
 
 
-            /*
-             * death.attack.mob.by.husk.message
-             */
-            if (shortKey.contains(".")) {
-
-                result = find(
-                        prefix +
-                        shortKey.substring(
-                                shortKey.indexOf('.') + 1
-                        ) +
-                        ".message",
-                        args
-                );
+                Component result =
+                        find(
+                                prefix +
+                                shortKey +
+                                ".message",
+                                args
+                        );
 
 
                 if (result != null) {
                     return result;
+                }
+
+
+
+                if (shortKey.contains(".")) {
+
+
+                    result =
+                            find(
+                                    prefix +
+                                    shortKey.substring(
+                                            shortKey.indexOf('.') + 1
+                                    )
+                                    + ".message",
+                                    args
+                            );
+
+
+                    if (result != null) {
+                        return result;
+                    }
                 }
             }
         }
@@ -196,10 +261,15 @@ public class DeathMessageResolver {
 
         if (Language.getInstance().has(key)) {
 
-            Object[] newArgs = args.clone();
+
+            Object[] newArgs =
+                    args.clone();
 
 
-            if (newArgs.length > 1 && newArgs[1] instanceof Component killer) {
+
+            if (newArgs.length > 1
+                    && newArgs[1] instanceof Component killer) {
+
 
                 Component replaced =
                         DeathNameResolver.resolve(
@@ -207,7 +277,15 @@ public class DeathMessageResolver {
                                 key
                         );
 
-                newArgs[1] = replaced;
+
+                /*
+                 * сохраняем hover убийцы
+                 */
+                newArgs[1] =
+                        replaced.copy()
+                                .withStyle(
+                                        killer.getStyle()
+                                );
             }
 
 
@@ -219,5 +297,27 @@ public class DeathMessageResolver {
 
 
         return null;
+    }
+
+
+
+    private static Component addOriginalMessageHover(
+            Component message,
+            Component original
+    ) {
+
+        Component hoverText =
+                Component.translatable(
+                        "declinable-death-messages.hover.original",
+                        original
+                );
+
+
+        return message.copy()
+                .withStyle(style ->
+                        style.withHoverEvent(
+                                new HoverEvent.ShowText(hoverText)
+                        )
+                );
     }
 }
