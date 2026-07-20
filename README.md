@@ -14,9 +14,9 @@
 
 ```
 Player был убит Паук
-Player был убит Steve
 Player был убит Боб
 Player был обречён на падение благодаря Паук
+Player был сожжён дотла, пока боролся с Steve
 ```
 
 В наборе ресурсов:
@@ -24,9 +24,10 @@ Player был обречён на падение благодаря Паук
 ```json
 {
   "death.attack.mob.by.minecraft.spider": "пауком",
-  "death.attack.player.by.Steve": "Steve-ом",
   "death.attack.mob.by.Боб": "Бобом",
-  "death.fell.assist.by.minecraft.spider": "пауку"
+  "death.fell.assist.by.minecraft.spider": "пауку",
+  "death.attack.onFire.player.by.Steve.message": "%1$s был сожжён дотла, пока боролся со %2$s",
+  "death.attack.onFire.player.by.Steve": "Steve-ом"
 }
 ```
 
@@ -34,9 +35,9 @@ Player был обречён на падение благодаря Паук
 
 ```
 Player был убит пауком
-Player был убит Steve-ом
 Player был убит Бобом
 Player был обречён на падение благодаря пауку
+Player был сожжён дотла, пока боролся со Steve-ом
 ```
 
 ## Возможности
@@ -59,9 +60,10 @@ Player был обречён на падение благодаря пауку
 ```json
 {
   "death.attack.mob.by.minecraft.spider": "пауком",
-  "death.attack.player.by.Steve": "Steve-ом",
   "death.attack.mob.by.Боб": "Бобом",
-  "death.fell.assist.by.minecraft.spider": "пауку"
+  "death.fell.assist.by.minecraft.spider": "пауку",
+  "death.attack.onFire.player.by.Steve.message": "%1$s был сожжён дотла, пока боролся со %2$s",
+  "death.attack.onFire.player.by.Steve": "Steve-ом"
 }
 ```
 
@@ -88,9 +90,9 @@ Without the mod:
 
 ```
 Player был убит Паук
-Player был убит Steve
 Player был убит Боб
 Player был обречён на падение благодаря Паук
+Player был сожжён дотла, пока боролся с Steve
 ```
 
 With a resource pack:
@@ -98,9 +100,10 @@ With a resource pack:
 ```json
 {
   "death.attack.mob.by.minecraft.spider": "пауком",
-  "death.attack.player.by.Steve": "Steve-ом",
   "death.attack.mob.by.Боб": "Бобом",
-  "death.fell.assist.by.minecraft.spider": "пауку"
+  "death.fell.assist.by.minecraft.spider": "пауку",
+  "death.attack.onFire.player.by.Steve.message": "%1$s был сожжён дотла, пока боролся со %2$s",
+  "death.attack.onFire.player.by.Steve": "Steve-ом"
 }
 ```
 
@@ -108,9 +111,9 @@ Death messages become:
 
 ```
 Player был убит пауком
-Player был убит Steve-ом
 Player был убит Бобом
 Player был обречён на падение благодаря пауку
+Player был сожжён дотла, пока боролся со Steve-ом
 ```
 
 </details>
@@ -126,7 +129,7 @@ Without the mod:
 Player je ubijen od strane Pauk
 Player je ubijen od strane Steve
 Player je ubijen od strane Bob
-Player je usahnuo tokom borbe sa Steve
+Player se nabio na stalagmit dok se borio s Steve
 ```
 
 With a resource pack:
@@ -136,7 +139,8 @@ With a resource pack:
   "death.attack.mob.by.minecraft.spider": "pauka",
   "death.attack.player.by.Steve": "Stevea",
   "death.attack.mob.by.Bob": "Boba",
-  "death.attack.wither.player.by.Steve": "Steveom"
+  "death.attack.stalagmite.player.by.Steve.message": "%1$s se nabio na stalagmit dok se borio sa %2$s",
+  "death.attack.stalagmite.player.by.Steve": "Steveom"
 }
 ```
 
@@ -146,7 +150,7 @@ Death messages become:
 Player je ubijen od strane pauka
 Player je ubijen od strane Stevea
 Player je ubijen od strane Boba
-Player je usahnuo tokom borbe sa Steveom
+Player se nabio na stalagmit dok se borio sa Steveom
 ```
 
 </details>
@@ -174,7 +178,8 @@ With a resource pack:
   "death.attack.player": "Gracz %1$s został zabity przez %2$s",
   "death.attack.player.by.Steve": "Steve'a",
   "death.attack.mob.by.Bob": "Boba",
-  "death.attack.wither.player.by.minecraft.spider": "Stevem"
+  "death.attack.wither.player.by.Steve.message": "Stevem",
+  "death.attack.wither.player.by.Steve": "Stevem"
 }
 ```
 
@@ -184,7 +189,7 @@ Death messages become:
 Gracz Player został zabity przez pająka
 Gracz Player został zabity przez Steve'a
 Gracz Player został zabity przez Boba
-Gracz Player obumarł podczas walki z Stevem
+Gracz Player obumarł podczas walki ze Stevem
 ```
 
 </details>
@@ -212,9 +217,10 @@ Examples:
 ```json
 {
   "death.attack.mob.by.minecraft.spider": "пауком",
-  "death.attack.player.by.Steve": "Steve-ом",
   "death.attack.mob.by.Боб": "Бобом",
-  "death.fell.assist.by.minecraft.spider": "пауку"
+  "death.fell.assist.by.minecraft.spider": "пауку",
+  "death.attack.onFire.player.by.Steve.message": "%1$s был сожжён дотла, пока боролся со %2$s",
+  "death.attack.onFire.player.by.Steve": "Steve-ом"
 }
 ```
 
@@ -230,7 +236,8 @@ Example only. Not included by default.
   "death.attack.mob.by.minecraft.spider": "pauka",
   "death.attack.player.by.Steve": "Stevea",
   "death.attack.mob.by.Bob": "Boba",
-  "death.attack.wither.player.by.Steve": "Steveom"
+  "death.attack.stalagmite.player.by.Steve.message": "%1$s se nabio na stalagmit dok se borio sa %2$s",
+  "death.attack.stalagmite.player.by.Steve": "Steveom"
 }
 ```
 
@@ -248,7 +255,8 @@ Example only. Not included by default.
   "death.attack.player": "Gracz %1$s został zabity przez %2$s",
   "death.attack.player.by.Steve": "Steve'a",
   "death.attack.mob.by.Bob": "Boba",
-  "death.attack.wither.player.by.minecraft.spider": "Stevem"
+  "death.attack.wither.player.by.Steve.message": "Stevem",
+  "death.attack.wither.player.by.Steve": "Stevem"
 }
 ```
 
