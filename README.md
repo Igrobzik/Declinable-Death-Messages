@@ -48,9 +48,12 @@ Player был сожжён дотла, пока боролся со Steve-ом
 - Поддержка всех сообщений с ключом `death.*`.
 - Использование ключей перевода из наборов ресурсов.
 - Работа исключительно на стороне клиента.
+- Изменение сообщения о смерти в соответствии с названием сущности или имени моба/игрока.
 - Настройки через Cloth Config.
 - Возможность отключить склонение имён игроков и сущностей через настройки мода.
-- Возврат оригинального имени, если склонение не указано.
+- Возможность отключить измение сообщений через настройки мода.
+- Возможность включить отображение исходного сообщения подсказкой через настройки мода.
+- Возврат оригинального имени, если склонение или сообщение не указано.
 - Встроенный набор русских склонений для ванильных сущностей, некоторых имён и некоторых модовых сущностей и сообщений о смерти (которые вы можете использовать как пример для перевода на ваш язык).
 
 ## Ключи перевода
@@ -202,9 +205,12 @@ Gracz Player obumarł podczas walki ze Stevem
 - Supports all `death.*` messages.
 - Uses resource pack translation keys.
 - Works entirely on the client.
+- Change death message to match entity/player name.
 - Configurable through Cloth Config.
 - Ability to disable name declension for players and entities in the mod settings.
-- Falls back to the original name if no declension is provided.
+- Ability to disable message editing in the mod settings.
+- Ability to enable hover the original message as a tooltip in the mod settings.
+- Falls back to the original name if no declension or message is provided.
 - Built-in Russian declension pack with vanilla entities, some names, and some modded entities and death messages (which you can use as examples when translating into your language).
 
 ## Translation keys
