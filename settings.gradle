@@ -48,4 +48,3 @@ rootProject.name = "declinable-death-messages"
 
 include("common")
 include("fabric")
-include("neoforge")
