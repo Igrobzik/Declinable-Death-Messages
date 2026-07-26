@@ -1,0 +1,17 @@
+plugins {
+    id 'java-library'
+}
+
+base {
+    archivesName = "declinable-death-messages-common"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 25
+}

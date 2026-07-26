@@ -8,5 +8,7 @@ public class DeclinableDeathMessagesClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
         ConfigManager.load();
+
+        System.out.println("[DDM] Client initialized");
     }
 }
