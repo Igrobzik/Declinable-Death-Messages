@@ -3,7 +3,7 @@ plugins {
 }
 
 base {
-    archivesName = "declinable-death-messages-common"
+    archivesName = "declinabledeathmessages-common"
 }
 
 java {

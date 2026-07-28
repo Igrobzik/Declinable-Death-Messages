@@ -44,7 +44,8 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "declinable-death-messages"
+rootProject.name = "declinabledeathmessages"
 
 include("common")
 include("fabric")
+include("neoforge")

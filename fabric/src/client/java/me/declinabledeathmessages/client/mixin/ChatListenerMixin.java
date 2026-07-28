@@ -1,4 +1,4 @@
-package me.declinabledeathmessages.mixin;
+package me.declinabledeathmessages.client.mixin;
 
 import me.declinabledeathmessages.DeathMessageResolver;
 

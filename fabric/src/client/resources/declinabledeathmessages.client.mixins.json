@@ -3,7 +3,7 @@
 	"package": "me.declinabledeathmessages.client.mixin",
 	"compatibilityLevel": "JAVA_25",
 	"client": [
-		"ExampleClientMixin"
+    	"ChatListenerMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -4,7 +4,7 @@ import net.minecraft.locale.Language;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.contents.TranslatableContents;
 
-import me.declinabledeathmessages.config.ConfigManager;
+import me.declinabledeathmessages.config.NeoForgeConfig;
 
 public class DeathNameResolver {
 
@@ -20,10 +20,14 @@ public class DeathNameResolver {
 
 
         if (!customName.isEmpty()
-                && ConfigManager.config.namesDeclension) {
+                && NeoForgeConfig.getBoolean(NeoForgeConfig.NAMES_DECLENSION)) {
 
             String key = prefix + customName;
 
+            DeclinableDeathMessages.LOGGER.info(
+                    "Trying death name key: {}",
+                    key
+            );
 
             Component result = find(
                     key,
@@ -36,13 +40,11 @@ public class DeathNameResolver {
         }
 
 
-
-        if (ConfigManager.config.entitiesDeclension) {
+        if (NeoForgeConfig.getBoolean(NeoForgeConfig.ENTITIES_DECLENSION)) {
 
             if (killer.getContents() instanceof TranslatableContents contents) {
 
                 String entityKey = contents.getKey();
-
 
                 String shortKey = entityKey;
 
@@ -54,6 +56,11 @@ public class DeathNameResolver {
 
 
                 String key = prefix + shortKey;
+
+                DeclinableDeathMessages.LOGGER.info(
+                        "Trying entity death name key: {}",
+                        key
+                );
 
 
                 Component result = find(
@@ -67,7 +74,6 @@ public class DeathNameResolver {
                 }
 
 
-
                 if (shortKey.contains(".")) {
 
                     key =
@@ -75,6 +81,12 @@ public class DeathNameResolver {
                             shortKey.substring(
                                     shortKey.indexOf('.') + 1
                             );
+
+
+                    DeclinableDeathMessages.LOGGER.info(
+                            "Trying short entity death name key: {}",
+                            key
+                    );
 
 
                     result = find(
@@ -129,6 +141,11 @@ public class DeathNameResolver {
                     .setStyle(original.getStyle());
         }
 
+
+        DeclinableDeathMessages.LOGGER.info(
+                "Missing custom death name key: {}",
+                key
+        );
 
         return null;
     }

@@ -9,22 +9,33 @@ import net.fabricmc.loader.api.ModContainer;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import me.declinabledeathmessages.common.Common;
+
 public class DeclinableDeathMessages implements ModInitializer {
 
-    public static final String MOD_ID = "declinable-death-messages";
+    public static final Logger LOGGER =
+            LoggerFactory.getLogger(Common.MOD_ID);
 
     @Override
     public void onInitialize() {
-        System.out.println("Declinable Death Messages loaded!");
+
+        Common.init();
+
+        LOGGER.info("Declinable Death Messages loaded!");
 
         ModContainer modContainer = FabricLoader.getInstance()
-                .getModContainer(MOD_ID)
+                .getModContainer(Common.MOD_ID)
                 .orElseThrow();
 
         ResourceLoader.registerBuiltinPack(
-                Identifier.fromNamespaceAndPath(MOD_ID, "russian"),
+                Identifier.fromNamespaceAndPath(Common.MOD_ID, "russian"),
                 modContainer,
-                Component.translatable("declinable-death-messages.resourcepack.russian"),
+                Component.translatable(
+                        "declinabledeathmessages.resourcepack.russian"
+                ),
                 PackActivationType.DEFAULT_ENABLED
         );
     }

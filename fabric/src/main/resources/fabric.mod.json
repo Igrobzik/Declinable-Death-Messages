@@ -1,6 +1,6 @@
 {
 	"schemaVersion": 1,
-	"id": "declinable-death-messages",
+	"id": "declinabledeathmessages",
 	"version": "${version}",
 	"name": "Declinable Death Messages",
 	"description": "Inflects killer mob names in death messages for languages with grammatical cases.\nSupports custom declensions (case marking) through resource pack translation keys.",
@@ -8,12 +8,12 @@
 		"Igrobzik"
 	],
 	"contact": {
-		"homepage": "https://modrinth.com/mod/declinable-death-messages",
-		"issues": "https://github.com/Igrobzik/Declinable-Death-Messages/issues",
-		"sources": "https://github.com/Igrobzik/Declinable-Death-Messages"
+		"homepage": "https://modrinth.com/mod/declinabledeathmessages",
+		"issues": "https://github.com/Igrobzik/declinabledeathmessages/issues",
+		"sources": "https://github.com/Igrobzik/declinabledeathmessages"
 	},
 	"license": "CC0-1.0",
-	"icon": "assets/declinable-death-messages/icon.png",
+	"icon": "assets/declinabledeathmessages/icon.png",
 	"environment": "client",
 	"entrypoints": {
 		"main": [
@@ -28,7 +28,7 @@
 	},
 	"mixins": [
 		{
-			"config": "declinable-death-messages.mixins.json",
+			"config": "declinabledeathmessages.client.mixins.json",
 			"environment": "client"
 		}
 	],

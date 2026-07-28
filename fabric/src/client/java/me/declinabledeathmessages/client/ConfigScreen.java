@@ -18,17 +18,17 @@ public class ConfigScreen {
 
         ConfigBuilder builder = ConfigBuilder.create()
                 .setParentScreen(parent)
-                .setTitle(Component.translatable("declinable-death-messages.config.title"));
+                .setTitle(Component.translatable("declinabledeathmessages.config.title"));
 
         ConfigCategory general = builder.getOrCreateCategory(
-                Component.translatable("declinable-death-messages.config.general")
+                Component.translatable("declinabledeathmessages.config.general")
         );
 
         ConfigEntryBuilder entryBuilder = ConfigEntryBuilder.create();
 
         general.addEntry(
                 entryBuilder.startBooleanToggle(
-                        Component.translatable("declinable-death-messages.config.names"),
+                        Component.translatable("declinabledeathmessages.config.names"),
                         ConfigManager.config.namesDeclension
                 )
                 .setDefaultValue(true)
@@ -37,15 +37,15 @@ public class ConfigScreen {
                             Minecraft.getInstance().options.advancedItemTooltips;
 
                     return Optional.of(new Component[] {
-                            Component.translatable("declinable-death-messages.config.names.tooltip"),
-                            Component.translatable("declinable-death-messages.config.tooltip.noKey"),
-                            Component.translatable("declinable-death-messages.config.tooltip.packAbuse"),
+                            Component.translatable("declinabledeathmessages.config.names.tooltip"),
+                            Component.translatable("declinabledeathmessages.config.tooltip.noKey"),
+                            Component.translatable("declinabledeathmessages.config.tooltip.packAbuse"),
                             advancedTooltips
                                     ? Component.translatable(
-                                            "declinable-death-messages.config.tooltip.enabledAdvancedTooltips"
+                                            "declinabledeathmessages.config.tooltip.enabledAdvancedTooltips"
                                     )
                                     : Component.translatable(
-                                            "declinable-death-messages.config.tooltip.disabledAdvancedTooltips",
+                                            "declinabledeathmessages.config.tooltip.disabledAdvancedTooltips",
                                             Component.keybind("key.debug.modifier"),
                                             Component.keybind("key.debug.showAdvancedTooltips")
                                     )
@@ -60,7 +60,7 @@ public class ConfigScreen {
 
         general.addEntry(
                 entryBuilder.startBooleanToggle(
-                        Component.translatable("declinable-death-messages.config.entities"),
+                        Component.translatable("declinabledeathmessages.config.entities"),
                         ConfigManager.config.entitiesDeclension
                 )
                 .setDefaultValue(true)
@@ -69,15 +69,15 @@ public class ConfigScreen {
                             Minecraft.getInstance().options.advancedItemTooltips;
 
                     return Optional.of(new Component[] {
-                            Component.translatable("declinable-death-messages.config.entities.tooltip"),
-                            Component.translatable("declinable-death-messages.config.tooltip.noKey"),
-                            Component.translatable("declinable-death-messages.config.tooltip.packAbuse"),
+                            Component.translatable("declinabledeathmessages.config.entities.tooltip"),
+                            Component.translatable("declinabledeathmessages.config.tooltip.noKey"),
+                            Component.translatable("declinabledeathmessages.config.tooltip.packAbuse"),
                             advancedTooltips
                                     ? Component.translatable(
-                                            "declinable-death-messages.config.tooltip.enabledAdvancedTooltips"
+                                            "declinabledeathmessages.config.tooltip.enabledAdvancedTooltips"
                                     )
                                     : Component.translatable(
-                                            "declinable-death-messages.config.tooltip.disabledAdvancedTooltips",
+                                            "declinabledeathmessages.config.tooltip.disabledAdvancedTooltips",
                                             Component.keybind("key.debug.modifier"),
                                             Component.keybind("key.debug.showAdvancedTooltips")
                                     )
@@ -92,15 +92,15 @@ public class ConfigScreen {
 
         general.addEntry(
                 entryBuilder.startBooleanToggle(
-                        Component.translatable("declinable-death-messages.config.message"),
+                        Component.translatable("declinabledeathmessages.config.message"),
                         ConfigManager.config.messageInflection
                 )
                 .setDefaultValue(true)
                 .setTooltipSupplier(() -> {
                     return Optional.of(new Component[] {
-                            Component.translatable("declinable-death-messages.config.message.tooltip"),
-                            Component.translatable("declinable-death-messages.config.message.tooltip.noKey"),
-                            Component.translatable("declinable-death-messages.config.tooltip.packAbuse"),
+                            Component.translatable("declinabledeathmessages.config.message.tooltip"),
+                            Component.translatable("declinabledeathmessages.config.message.tooltip.noKey"),
+                            Component.translatable("declinabledeathmessages.config.tooltip.packAbuse"),
                     });
                 })
                 .setSaveConsumer(value -> {
@@ -112,28 +112,17 @@ public class ConfigScreen {
 
         general.addEntry(
                 entryBuilder.startBooleanToggle(
-                        Component.translatable("declinable-death-messages.config.originalMessageHover"),
+                        Component.translatable("declinabledeathmessages.config.originalMessageHover"),
                         ConfigManager.config.originalMessageHover
                 )
                 .setDefaultValue(false)
                 .setTooltipSupplier(() -> {
-                    boolean advancedTooltips =
-                            Minecraft.getInstance().options.advancedItemTooltips;
-
-                    return Optional.of(new Component[] {
-                            advancedTooltips
-                                    ? Component.translatable(
-                                            "declinable-death-messages.config.originalMessageHover.tooltip.enabledAdvancedTooltips",
-                                            Component.translatable("declinable-death-messages.config.originalMessageHover.tooltip")
-                                    )
-                                    : Component.translatable(
-                                            "declinable-death-messages.config.originalMessageHover.tooltip.disabledAdvancedTooltips",
-                                            Component.translatable("declinable-death-messages.config.originalMessageHover.tooltip"),
-                                            Component.keybind("key.debug.modifier"),
-                                            Component.keybind("key.debug.showAdvancedTooltips")
-                                    )
-                    });
-                })
+                        return Optional.of(new Component[] {
+                                Component.translatable(
+                                        "declinabledeathmessages.config.originalMessageHover.tooltip"
+                                )
+                        });
+                        })
                 .setSaveConsumer(value -> {
                     ConfigManager.config.originalMessageHover = value;
                     ConfigManager.save();

@@ -1,6 +1,7 @@
 package me.declinabledeathmessages.client;
 
 import net.fabricmc.api.ClientModInitializer;
+import me.declinabledeathmessages.DeclinableDeathMessages;
 import me.declinabledeathmessages.config.ConfigManager;
 
 public class DeclinableDeathMessagesClient implements ClientModInitializer {
@@ -9,6 +10,6 @@ public class DeclinableDeathMessagesClient implements ClientModInitializer {
     public void onInitializeClient() {
         ConfigManager.load();
 
-        System.out.println("[DDM] Client initialized");
+        DeclinableDeathMessages.LOGGER.info("Client initialized");
     }
 }

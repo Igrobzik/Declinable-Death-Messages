@@ -1,0 +1,22 @@
+{
+   "modmenu.descriptionTranslation.declinabledeathmessages": "Inflects killer names in death messages for languages with grammatical cases.\nSupports custom declensions (case marking) through resource pack translation keys.",
+   "modmenu.summaryTranslation.declinabledeathmessages": "Inflects killer names in death messages for languages with grammatical cases.",
+   "declinabledeathmessages.config.title": "Declinable Death Messages Configs",
+   "declinabledeathmessages.config.general": "General",
+   "declinabledeathmessages.config.names": "Decline Names",
+   "declinabledeathmessages.config.names.tooltip": "Use keys of the form '[death message].by.[name]' to decline player names and renamed entity names.",
+   "declinabledeathmessages.config.entities": "Decline Entities",
+   "declinabledeathmessages.config.entities.tooltip": "Use keys of the form '[death message].by.[mod ID].[entity]' and '[death message].by.[entity]' to decline unrenamed entity names.",
+   "declinabledeathmessages.config.tooltip.noKey": "If the key is missing, returns the original entity name.",
+   "declinabledeathmessages.config.originalMessageHover": "Show Original Message",
+   "declinabledeathmessages.config.originalMessageHover.tooltip": "Shows the original death message on hover.",
+   "declinabledeathmessages.config.message": "Grammar Adaptation for Death Messages",
+   "declinabledeathmessages.config.message.tooltip": "Use keys of the form '[death message].by.[entity/name].message' to adapt death messages for the language grammar.",
+   "declinabledeathmessages.config.message.tooltip.noKey": "If the key is missing, returns the original death message.",
+   "declinabledeathmessages.config.tooltip.packAbuse": "Disable this if your resource pack or a server resource pack abuses this feature.",
+   "declinabledeathmessages.config.tooltip.disabledAdvancedTooltips": "Additionally, you can enable advanced tooltips (%s + %s) to display the killer's original name when hovering over their name.",
+   "declinabledeathmessages.config.tooltip.enabledAdvancedTooltips": "Additionally, with advanced tooltips enabled, you can hover over the killer's name to see their original name.",
+   "declinabledeathmessages.hover.original": "Original Message: %s",
+   "declinabledeathmessages.resourcepack.russian": "Russian Declensions",
+   "declinabledeathmessages.resourcepack.russian.description": "Russian Declension Pack"
+}

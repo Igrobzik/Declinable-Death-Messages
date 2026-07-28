@@ -1,0 +1,22 @@
+{
+   "modmenu.descriptionTranslation.declinabledeathmessages": "Склоняет имена убийц в сообщениях о смерти.\nПоддерживает пользовательские склонения через ключи перевода в наборах ресурсов.",
+   "modmenu.summaryTranslation.declinabledeathmessages": "Склоняемые сообщения о смерти!\nСклоняет имена убийц в сообщениях о смерти.",
+   "declinabledeathmessages.config.title": "Настройки Declinable Death Messages",
+   "declinabledeathmessages.config.general": "Основные",
+   "declinabledeathmessages.config.names": "Склонение имён",
+   "declinabledeathmessages.config.names.tooltip": "Склоняет имена игроков и переименованных сущностей с помощью ключей вида «[сообщение о смерти].by.[имя]».",
+   "declinabledeathmessages.config.entities": "Склонение сущностей",
+   "declinabledeathmessages.config.entities.tooltip": "Склоняет названия непереименованных сущностей с помощью ключей вида «[сообщение о смерти].by.[ID мода].[сущность]» и «[сообщение о смерти].by.[сущность]».",
+   "declinabledeathmessages.config.tooltip.noKey": "При отсутствии ключа возвращает исходное название сущности.",
+   "declinabledeathmessages.config.originalMessageHover": "Показывать исходное сообщение",
+   "declinabledeathmessages.config.originalMessageHover.tooltip": "Показывает исходное сообщение о смерти при наведении.",
+   "declinabledeathmessages.config.message": "Изменение сообщений о смерти",
+   "declinabledeathmessages.config.message.tooltip": "Изменяет сообщения о смерти в соответствии с грамматикой языка с помощью ключей вида «[сообщение о смерти].by.[сущность/имя].message».",
+   "declinabledeathmessages.config.message.tooltip.noKey": "При отсутствии ключа возвращает исходное сообщение о смерти.",
+   "declinabledeathmessages.config.tooltip.packAbuse": "Выключите, если ваш или серверный набор ресурсов злоупотребляют этой возможностью.",
+   "declinabledeathmessages.config.tooltip.disabledAdvancedTooltips": "Кроме того, вы можете включить расширенные подсказки (%s + %s), чтобы при наведении мышью на имя убийцы отображалось его исходное имя.",
+   "declinabledeathmessages.config.tooltip.enabledAdvancedTooltips": "Кроме того, со включёнными расширенными подсказками вы можете навестись мышью на имя убийцы, чтобы увидеть его исходное имя.",
+   "declinabledeathmessages.hover.original": "Исходное сообщение: %s",
+   "declinabledeathmessages.resourcepack.russian": "Русские склонения",
+   "declinabledeathmessages.resourcepack.russian.description": "Набор склонений для русского языка"
+}

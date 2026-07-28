@@ -5,7 +5,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.HoverEvent;
 import net.minecraft.network.chat.contents.TranslatableContents;
 
-import me.declinabledeathmessages.config.ConfigManager;
+import me.declinabledeathmessages.config.NeoForgeConfig;
 
 public class DeathMessageResolver {
 
@@ -16,35 +16,28 @@ public class DeathMessageResolver {
             return message;
         }
 
-
         String key = contents.getKey();
-
 
         if (!key.startsWith("death.attack.")) {
             return message;
         }
-
 
         if (key.contains(".by.")
                 && key.endsWith(".message")) {
             return message;
         }
 
-
         Object[] args = contents.getArgs();
-
 
         if (args.length <= 1) {
             return message;
         }
 
-
         if (!(args[1] instanceof Component killer)) {
             return message;
         }
 
-
-        if (ConfigManager.config.messageInflection) {
+        if (NeoForgeConfig.MESSAGE_INFLECTION.get()) {
 
             Component customMessage =
                     findCustomMessage(
@@ -52,7 +45,6 @@ public class DeathMessageResolver {
                             killer,
                             args
                     );
-
 
             if (customMessage != null) {
 
@@ -63,8 +55,7 @@ public class DeathMessageResolver {
                         customMessage.getString()
                 );
 
-
-                if (ConfigManager.config.originalMessageHover) {
+                if (NeoForgeConfig.ORIGINAL_MESSAGE_HOVER.get()) {
 
                     Component original =
                             Component.translatable(
@@ -78,11 +69,9 @@ public class DeathMessageResolver {
                     );
                 }
 
-
                 return customMessage;
             }
         }
-
 
         Component replacedKiller =
                 DeathNameResolver.resolve(
@@ -90,12 +79,10 @@ public class DeathMessageResolver {
                         key
                 );
 
-
         if (replacedKiller != killer) {
 
             Object[] newArgs =
                     args.clone();
-
 
             newArgs[1] =
                     replacedKiller.copy()
@@ -103,13 +90,11 @@ public class DeathMessageResolver {
                                     killer.getStyle()
                             );
 
-
             Component result =
                     Component.translatable(
                             key,
                             newArgs
                     );
-
 
             DeclinableDeathMessages.LOGGER.info(
                     "Death name replaced: [{}] {} -> {}",
@@ -118,8 +103,7 @@ public class DeathMessageResolver {
                     replacedKiller.getString()
             );
 
-
-            if (ConfigManager.config.originalMessageHover) {
+            if (NeoForgeConfig.ORIGINAL_MESSAGE_HOVER.get()) {
 
                 Component original =
                         Component.translatable(
@@ -127,17 +111,14 @@ public class DeathMessageResolver {
                                 args
                         );
 
-
                 return addOriginalMessageHover(
                         result,
                         original
                 );
             }
 
-
             return result;
         }
-
 
         return message;
     }
@@ -153,18 +134,15 @@ public class DeathMessageResolver {
         String prefix =
                 deathKey + ".by.";
 
-
         String name =
                 killer.getString();
 
 
         if (!name.isEmpty()
-                && ConfigManager.config.namesDeclension) {
-
+                && NeoForgeConfig.NAMES_DECLENSION.get()) {
 
             String searchKey =
                     prefix + name + ".message";
-
 
             Component result =
                     find(
@@ -172,24 +150,19 @@ public class DeathMessageResolver {
                             args
                     );
 
-
             if (result != null) {
                 return result;
             }
         }
 
 
-
-        if (ConfigManager.config.entitiesDeclension) {
-
+        if (NeoForgeConfig.ENTITIES_DECLENSION.get()) {
 
             if (killer.getContents()
                     instanceof TranslatableContents entityContents) {
 
-
                 String entityKey =
                         entityContents.getKey();
-
 
                 String shortKey =
                         entityKey;
@@ -202,7 +175,6 @@ public class DeathMessageResolver {
                                     "entity.".length()
                             );
                 }
-
 
 
                 String searchKey =
@@ -221,9 +193,7 @@ public class DeathMessageResolver {
                 }
 
 
-
                 if (shortKey.contains(".")) {
-
 
                     searchKey =
                             prefix +
@@ -260,28 +230,23 @@ public class DeathMessageResolver {
 
         if (Language.getInstance().has(key)) {
 
-
             DeclinableDeathMessages.LOGGER.info(
                     "Found custom death message key: {}",
                     key
             );
 
-
             Object[] newArgs =
                     args.clone();
 
 
-
             if (newArgs.length > 1
                     && newArgs[1] instanceof Component killer) {
-
 
                 Component replaced =
                         DeathNameResolver.resolve(
                                 killer,
                                 key
                         );
-
 
                 newArgs[1] =
                         replaced.copy()
@@ -290,13 +255,11 @@ public class DeathMessageResolver {
                                 );
             }
 
-
             return Component.translatable(
                     key,
                     newArgs
             );
         }
-
 
         return null;
     }
