@@ -4,7 +4,7 @@
 
 ### Склоняемые сообщения о смерти
 
-Клиентский Fabric-мод, позволяющий языкам с падежами (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имён убийц в сообщениях о смерти Minecraft.
+Клиентский мод для Fabric и NeoForge, позволяющий языкам с падежами (русский, украинский, польский, чешский, словацкий и т.д.) изменять форму имён убийц в сообщениях о смерти Minecraft.
 
 Мод не изменяет существующие файлы переводов. Вместо этого он использует дополнительные ключи перевода из встроенных переводов или наборов ресурсов. Он лишь добавляет поддержку дополнительных ключей перевода, которые могут быть предоставлены самим модом (для встроенных языков) или наборами ресурсов.
 
@@ -51,7 +51,7 @@ Player был сожжён дотла, пока боролся со Steve-ом
 - Изменение сообщения о смерти в соответствии с названием сущности или имени моба/игрока.
 - Настройки через Cloth Config.
 - Возможность отключить склонение имён игроков и сущностей через настройки мода.
-- Возможность отключить измение сообщений через настройки мода.
+- Возможность отключить изменение сообщений через настройки мода.
 - Возможность включить отображение исходного сообщения подсказкой через настройки мода.
 - Возврат оригинального имени, если склонение или сообщение не указано.
 - Встроенный набор русских склонений для ванильных сущностей, некоторых имён и некоторых модовых сущностей и сообщений о смерти (которые вы можете использовать как пример для перевода на ваш язык).
@@ -80,7 +80,7 @@ Player был сожжён дотла, пока боролся со Steve-ом
 
 </details>
 
-A client-side Fabric mod that allows languages with grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
+A client-side mod for Fabric and NeoForge that allows languages with grammatical cases (such as Russian, Ukrainian, Polish, Czech, Slovak and others) to inflect killer names in Minecraft death messages.
 
 The mod leaves existing Minecraft translations unchanged. It only adds support for extra translation keys, which can be provided by the mod itself (for built-in languages) or by resource packs.
 

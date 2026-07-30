@@ -21,6 +21,10 @@ repositories {
 	}
 }
 
+base {
+    archivesName = "${mod_id}-fabric"
+}
+
 loom {
 	splitEnvironmentSourceSets()
 
