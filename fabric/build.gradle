@@ -37,6 +37,7 @@ loom {
 }
 
 dependencies {
+    include project(":common")
     implementation project(":common")
 
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
