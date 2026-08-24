@@ -18,7 +18,7 @@ public class DeathMessageResolver {
 
         String key = contents.getKey();
 
-        if (!key.startsWith("death.attack.")) {
+        if (!key.startsWith("death.")) {
             return message;
         }
 
